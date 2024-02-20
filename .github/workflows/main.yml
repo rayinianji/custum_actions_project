@@ -1,7 +1,7 @@
 name: caller custum actions
 on:
   push:
-    branches: ["dev"]
+    branches: ["master"]
 
 jobs:
   hello_caller_job:
