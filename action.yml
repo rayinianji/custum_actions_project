@@ -29,9 +29,10 @@ runs:
     - name: Set Github path
       run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
       shell: bash
-      env: GITHUB_ACTION_PATH: ${{ github.action_path }}
+      env: 
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
       
-    - name: run goodbye.sh
+    - name: run goodbye step
       run: goodbye.sh
       shell: bash    
 
