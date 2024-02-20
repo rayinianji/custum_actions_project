@@ -13,7 +13,7 @@ outputs:
 
 runs:
   using: "composite"
-  stpes:
+  steps:
     
     - name: set greetings
       run: echo "hello $INPUT_WHO_TO_GREET"
