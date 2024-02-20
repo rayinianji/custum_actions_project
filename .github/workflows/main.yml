@@ -1,0 +1,27 @@
+name: caller custum actions
+on:
+  push:
+    branches: ["dev"]
+
+jobs:
+  hello_caller_job:
+    runs-on: ubuntu-latest
+    
+    steps:           
+      - uses: actions/checkout@v4
+    #   - name: calling random action
+      - id: foo
+        uses: ./.github/actions/random-ex
+        with:
+          name-of-person : Anjaneyulu Rayini
+      - run: echo random number " "
+        shell: bash
+        env:
+          RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}    
+
+                  
+
+
+
+
+
